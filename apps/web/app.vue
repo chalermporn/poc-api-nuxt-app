@@ -1,7 +1,7 @@
 
 <script lang="ts" setup>
 import { api } from 'libs'
-import { Article } from 'ui'
+import  Article  from './components/article.vue'
 const { data, error } = await api.nendoroid.skadi.get()
 if (error) throw error
 const { id, name, cover, type, license } = data

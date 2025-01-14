@@ -14,7 +14,7 @@ const app = new Elysia()
     .get('/', () => 'Hello Elysia')
     .get('/nendoroid/skadi', () => ({
         id: 2025,
-        name: 'Skadi',
+        name: 'Skadino',
         type: 'Nendoroid',
         manufacture: 'Goodsmile',
         cover: 'http://localhost:3000/assets/skadi.jpg',

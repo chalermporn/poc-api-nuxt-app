@@ -8,7 +8,6 @@ const config = {
     "./plugins/**/*.{js,ts}",
     "./app.vue",
     "./error.vue",
-    "./../../**/*.vue",
   ],
   presets: [sharedConfig],
 };
