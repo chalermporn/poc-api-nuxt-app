@@ -20,8 +20,7 @@ module.exports = {
     project,
   },
   globals: {
-    React: true,
-    JSX: true,
+
   },
   settings: {
     "import/resolver": {

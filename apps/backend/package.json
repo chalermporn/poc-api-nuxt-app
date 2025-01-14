@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "main": "./src/index.ts",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "latest",
+    "@elysiajs/static": "latest",
+    "@elysiajs/swagger": "latest",
+    "@sinclair/typebox": "^0.34.13",
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.6",
+    "bun-types": "latest"
+  },
+  "module": "src/index.js",
+  "bun-create": {
+    "start": "bun run src/index.ts"
+  }
+}
