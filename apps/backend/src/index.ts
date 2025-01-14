@@ -17,7 +17,7 @@ const app = new Elysia()
         name: 'Skadino',
         type: 'Nendoroid',
         manufacture: 'Goodsmile',
-        cover: 'http://localhost:3000/assets/skadi.jpg',
+        cover: 'http://localhost:8000/assets/skadi.jpg',
         license: {
             type: 'approved',
             holder: 'Hypergraph',
@@ -40,7 +40,7 @@ const app = new Elysia()
             })
         }
     })
-    .listen(3000)
+    .listen(8000)
 
 export type App = typeof app
 
