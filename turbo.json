@@ -6,7 +6,20 @@
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".nuxt/**", ".output/**", "dist/**"]
     },
-    "lint": {},
+    "build:elysia": {
+      "command": "bun build --compile --minify-whitespace --minify-syntax --target bun --outfile server ./src/index.ts",
+      "inputs": ["$TURBO_DEFAULT$", "src/**/*.ts", ".env*"],
+      "outputs": ["dist/**", "server"]
+    },
+    "deploy": {
+      "dependsOn": ["build", "build:elysia"],
+      "inputs": [],
+      "outputs": []
+    },
+    "lint": {
+      "inputs": ["$TURBO_DEFAULT$", "**/*.ts", "**/*.js"],
+      "outputs": []
+    },
     "dev": {
       "cache": false,
       "persistent": true
