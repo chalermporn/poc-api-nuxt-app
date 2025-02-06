@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-    id: string
+    id: number
     name: string
     cover: string
     type: string
