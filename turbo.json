@@ -2,22 +2,47 @@
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".nuxt/**", ".output/**", "dist/**"]
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*"
+      ],
+      "outputs": [
+        ".nuxt/**",
+        ".output/**",
+        "dist/**"
+      ]
     },
     "build:elysia": {
-      "command": "bun build --compile --minify-whitespace --minify-syntax --target bun --outfile server ./src/index.ts",
-      "inputs": ["$TURBO_DEFAULT$", "src/**/*.ts", ".env*"],
-      "outputs": ["dist/**", "server"]
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "src/**/*.ts",
+        ".env*"
+      ],
+      "outputs": [
+        "dist/**",
+        "server"
+      ]
     },
     "deploy": {
-      "dependsOn": ["build", "build:elysia"],
+      "dependsOn": [
+        "build",
+        "build:elysia"
+      ],
       "inputs": [],
       "outputs": []
     },
     "lint": {
-      "inputs": ["$TURBO_DEFAULT$", "**/*.ts", "**/*.js"],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "**/*.ts",
+        "**/*.js"
+      ],
       "outputs": []
     },
     "dev": {
